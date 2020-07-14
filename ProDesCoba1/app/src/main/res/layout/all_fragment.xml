@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/layoutPertama"
         android:layout_width="match_parent"
-        android:layout_height="400dp">
+        android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -65,7 +65,7 @@
             android:layout_marginTop="120dp"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
-            android:background="@color/cardview_light_background">
+            android:background="@drawable/rounded">
 
             <ImageView
                 android:id="@+id/search_logo"
@@ -87,8 +87,10 @@
 
 
         <RelativeLayout
+            android:id="@+id/layoutDots"
+            android:background="@drawable/rounded"
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="200dp"
             android:layout_below="@id/searchBox"
             android:layout_margin="10dp"
             android:layout_centerInParent="true">
@@ -99,20 +101,60 @@
                 android:layout_height="175dp"/>
 
             <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabDots"
-                android:layout_alignParentBottom="true"
-                android:layout_width="match_parent"
+                android:id="@+id/tabLayout"
+                android:layout_margin="10dp"
+                android:layout_below="@id/viewPager"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 app:tabBackground="@drawable/tab_selector"
-                app:tabGravity="center"
-                app:tabIndicatorHeight="0dp"/>
-
+                app:tabIndicatorHeight="0dp" />
         </RelativeLayout>
 
     </RelativeLayout>
 
     <View style="@style/Divider"/>
+    
+    <RelativeLayout
+        android:id="@+id/kategoriLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:id="@+id/kategoriText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kategori"
+            android:textSize="25sp"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"/>
+        
+        <GridView
+            android:layout_below="@id/kategoriText"
+            android:layout_margin="5dp"
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="40dp"
+            android:numColumns="4"
+            android:verticalSpacing="5dp"
+            android:horizontalSpacing="5dp"
+            android:gravity="center"
+            android:stretchMode="columnWidth"
+            />
+        
+    </RelativeLayout>
+
+    <View style="@style/Divider"/>
+
+    <RelativeLayout
+        android:id="@+id/rekomendasiLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
 </LinearLayout>
     
 

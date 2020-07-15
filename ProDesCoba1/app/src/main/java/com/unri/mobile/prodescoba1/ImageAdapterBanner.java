@@ -8,11 +8,11 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-public class ImageAdapter extends PagerAdapter {
+public class ImageAdapterBanner extends PagerAdapter {
     private Context mContext;
     private int[] mImageId = new int[]{R.drawable.air, R.drawable.pantai, R.drawable.rumah};
 
-    ImageAdapter(Context context){
+    ImageAdapterBanner(Context context){
         mContext = context;
     }
 

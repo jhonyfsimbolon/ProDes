@@ -1,18 +1,20 @@
-package com.unri.mobile.prodescoba1;
+package com.unri.mobile.prodescoba1.Adapter;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.unri.mobile.prodescoba1.R;
+
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-public class ImageAdapterBanner extends PagerAdapter {
+public class ImageAdapter extends PagerAdapter {
     private Context mContext;
     private int[] mImageId = new int[]{R.drawable.air, R.drawable.pantai, R.drawable.rumah};
 
-    ImageAdapterBanner(Context context){
+    public ImageAdapter(Context context){
         mContext = context;
     }
 
